@@ -1,0 +1,18 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal() // Asegura que el plugin de Hilt se pueda resolver
+        google()
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "WizelineTechTest"
+include ':app'
