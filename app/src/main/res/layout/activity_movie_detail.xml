@@ -1,68 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/posterImageView"
+        <!-- Poster Image inside a MaterialCardView -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="centerCrop" />
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
 
-        <TextView
+            <ImageView
+                android:id="@+id/posterImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/movie_poster_description" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Movie Title -->
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/titleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="24sp"
+            android:text="Title"
+            android:textColor="?attr/colorOnSurface"
             android:padding="8dp"
-            android:text="Title" />
+            style="@style/TextAppearance.MaterialComponents.Headline6"/>
 
-        <TextView
+        <!-- Release Date -->
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/releaseDateTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Release Date: "
+            android:textColor="?attr/colorOnSurface"
             android:padding="8dp"
-            android:text="Release Date: " />
+            style="@style/TextAppearance.MaterialComponents.Body1"/>
 
-        <TextView
+        <!-- Duration -->
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/durationTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Duration: "
+            android:textColor="?attr/colorOnSurface"
             android:padding="8dp"
-            android:text="Duration: " />
+            style="@style/TextAppearance.MaterialComponents.Body1"/>
 
-        <TextView
+        <!-- Classification -->
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/classificationTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Classification: "
+            android:textColor="?attr/colorOnSurface"
             android:padding="8dp"
-            android:text="Classification: " />
+            style="@style/TextAppearance.MaterialComponents.Body1"/>
 
-        <TextView
+        <!-- Genres -->
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/genresTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Genres: "
+            android:textColor="?attr/colorOnSurface"
             android:padding="8dp"
-            android:text="Genres: " />
+            style="@style/TextAppearance.MaterialComponents.Body1"/>
 
-        <TextView
+        <!-- Description -->
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/descriptionTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="?attr/colorOnSurface"
             android:padding="8dp"
-            android:text="Description" />
+            style="@style/TextAppearance.MaterialComponents.Body1"/>
 
-        <Button
+        <!-- Back Button -->
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/backButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Back" />
+            android:text="Back"
+            android:layout_marginTop="16dp"
+            android:textColor="?attr/colorOnPrimary"
+            android:backgroundTint="?attr/colorPrimary"
+            style="@style/Widget.MaterialComponents.Button"/>
     </LinearLayout>
+
 </ScrollView>

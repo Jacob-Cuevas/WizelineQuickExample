@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">WizelineTechTest</string>
     <string name="incorrect_credentials_msg">Credenciales incorrectas</string>
+    <string name="movie_poster_description">Movie image</string>
 </resources>
